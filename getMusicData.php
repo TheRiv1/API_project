@@ -2,32 +2,61 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="guitar.css">
+	<!-- navbar bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <!-- table bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	
 	<title>Get Music Data</title>
 </head>
 <body>
-	
+	<!-- navbar bass and drums  -->
 <div class="header debug">
-	
+	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.php">MusicTabs</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Bass</a></li>
+      <li><a href="#">Drums</a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+    </ul>
+  </div>
+</nav>
 </div>
 
-<table class="table table-striped">
-	<h2>MusicSheet</h2>
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Artist</th>
-      <th scope="col">Song</th>
-     </tr>
-  </thead>
-  <tbody>
+		<!-- table output -->
+		<div class="container">
+  		<table class="table table-striped">
+				<h1>MusicSheets</h1>
+  		<thead class="thead-dark">
+    		<tr>
+      		<th scope="col"></th>
+      		<th scope="col"></th>
+     		  <th scope="col"></th>
+     		</tr>
+  		</thead>
+  		<tbody>
+
+  	</tbody>
+		</table>
+	</div>
+
+		<!-- php echo api -->
    <?php 
 
 //getMusicData.php?artists=
 
 $artist = $_GET['artist']; // ....getMusicData.php?artist='';
-$artist = '"' .  $artist . '"';
+// $artist = '"' .  $artist . '"';
 $artist = str_replace(' ', '%20', $artist);
 
 //$song = $_GET['song'];
@@ -71,15 +100,15 @@ $json =  file_get_contents($url);
 
 // echo $guitarTab[$i] -> id;
 // echo "<br>";
+ 	   
+echo'<div class="output debug">' . '<a href="tablink.php">' . '<h1>' . $guitarTab[$i] -> title  . '</h1>' . '</a>' .  '</div>';  
+// echo "<br>";
+echo '<h2>' . $artist . '</h2>';
 
- 	
-echo $guitarTab[$i] -> title;
-echo "<br>";
-echo "<br>";
+
  }
 ?>
-    </tbody>
-  </table>
-</div>
-</body>
+			
+	
+	</body>
 </html>
