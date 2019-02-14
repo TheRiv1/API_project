@@ -51,7 +51,7 @@
 	</div>
 
 		<!-- php echo api -->
-   <?php 
+<?php 
 
 //getMusicData.php?artists=
 
@@ -92,6 +92,9 @@ $json =  file_get_contents($url);
  }else{
  	 $max = count($guitarTab);
  }
+
+ echo "<h1>" . $artist . "</h1>";
+ echo '<br>';
  
  for ($i=0; $i < $max; $i++) { 
 	// ->  access methods and properties of an object
@@ -100,15 +103,13 @@ $json =  file_get_contents($url);
 
 // echo $guitarTab[$i] -> id;
 // echo "<br>";
- 	   
-echo'<div class="output debug">' . '<a href="tablink.php">' . '<h1>' . $guitarTab[$i] -> title  . '</h1>' . '</a>' .  '</div>';  
-// echo "<br>";
-echo '<h2>' . $artist . '</h2>';
+ // 	   
+echo '<div class="output debug">' .
+'<a href="http://www.songsterr.com/a/wa/bestMatchForQueryString?s=' . $guitarTab[$i] -> title . '</h1>' .
+ '&a=' .   $artist . '"> ' . '<h4>' . $guitarTab[$i] -> title . '</h4>' . ' </a></div>';	
+}
 
-
- }
-?>
-			
+?>			
 	
 	</body>
 </html>

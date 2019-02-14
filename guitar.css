@@ -21,3 +21,17 @@ height: 100%;
 	/*margin: 150px auto;*/
 	/*justify-content: flex-end;*/
 }
+
+@media screen and (min-width: 900px) {
+
+
+}
+
+@media screen and (max-width: 799px){
+
+    
+}
+
+@media only screen and (max-width: 320px) {
+
+}
