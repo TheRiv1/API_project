@@ -108,8 +108,20 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-family: font-family: 'Kaushan Script', cursive;
   
+}
+
+h1.top{
+    font-family: 'Felipa', cursive;
+  
+}
+
+h2.below-top{
+    font-family: 'Felipa', cursive;
+}
+
+a{
+    font-family: 'Felipa', cursive;
 }
 
 .below-top{
@@ -118,7 +130,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-family: font-family: 'Kaushan Script', cursive;
+   
 }
 
 @media screen and (min-width: 900px) {
@@ -128,7 +140,7 @@ body {
 
 @media screen and (max-width: 799px){
 
-    
+
 }
 
 @media only screen and (max-width: 320px) {

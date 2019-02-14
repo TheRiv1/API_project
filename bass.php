@@ -24,7 +24,7 @@
   </div>
 </nav>
 </div>
-<form action="tablink.php" method="GET">
+<form action="bass.php" method="GET">
 	<input class="artist-link" type="hidden" name="s" >
 	<input class="song-link" type="hidden" name="a">
 
@@ -37,7 +37,7 @@
 
 $a = $_GET['a'];
 $s = $_GET['s'];
-$url = "http://www.songsterr.com/a/wa/bestMatchForQueryString?s=$s&a=$a";
+$url = "http://www.songsterr.com/a/wa/bestMatchForQueryString?s= &a=  &track=bass";
 
 $json =  file_get_contents($url);
 $guitarTab = json_decode($json);

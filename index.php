@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- bootstrap searbar -->
+	<!-- bootstrap searchbar -->
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
 	 rel="stylesheet" id="bootstrap-css">
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -18,7 +18,7 @@
 <body>
 
 	<h1 class="top">Music Tabs</h1>
-	<h2 class="below-top">Find Artist or Songs</h2>
+	<h2 class="below-top">Find Your Tab</h2>
 	
 	<form action="getMusicData.php" method="GET">
 	<div class="search">

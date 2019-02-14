@@ -24,7 +24,7 @@
       <a class="navbar-brand" href="index.php">MusicTabs</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Bass</a></li>
+      <li class="active"><a href="bass.php">Bass</a></li>
       <li><a href="#">Drums</a></li>
       <li><a href="#"></a></li>
       <li><a href="#"></a></li>
@@ -57,8 +57,9 @@
 
 $artist = $_GET['artist']; // ....getMusicData.php?artist='';
 // $artist = '"' .  $artist . '"';
-$artist = str_replace(' ', '%20', $artist);
+$artist = str_replace(' ', ',', $artist);
 
+echo $artist;
 //$song = $_GET['song'];
 //$a = $_GET['artist name'];
 
@@ -105,8 +106,8 @@ $json =  file_get_contents($url);
 // echo "<br>";
  // 	   
 echo '<div class="output debug">' .
-'<a href="http://www.songsterr.com/a/wa/bestMatchForQueryString?s=' . $guitarTab[$i] -> title . '</h1>' .
- '&a=' .   $artist . '"> ' . '<h4>' . $guitarTab[$i] -> title . '</h4>' . ' </a></div>';	
+'<a href="http://www.songsterr.com/a/wa/bestMatchForQueryString?s=' . $guitarTab[$i] -> title .
+ '&a=' .   $artist . '"> '. '<h4>' . $guitarTab[$i] -> title . '</h4>' . ' </a></div>';	
 }
 
 ?>			
