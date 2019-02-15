@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Find your tab">
+  <meta name="keywords" content="guitar tabs">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -29,9 +31,24 @@
 	<input class="song-link" type="hidden" name="a">
 
 </form>
-
-
 <div>
+
+    <!-- table output -->
+    <div class="container">
+      <table class="table table-striped">
+        <h1>Bass Tab</h1>
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+
+    </tbody>
+    </table>
+  </div>
 
 <?php 
 
@@ -39,8 +56,10 @@
 
 $artist = $_GET['artist']; // ....getMusicData.php?artist='';
 // $artist = '"' .  $artist . '"';
-$inst = $_GET['inst'];
+$track = $_GET['track'];
 $artist = str_replace(' ', ',', $artist);
+
+
 
 // echo $artist;
 //$song = $_GET['song'];
@@ -76,7 +95,7 @@ $json =  file_get_contents($url);
  }else{
    $max = count($guitarTab);
  }
-  echo "<h3>" . "Bass Tab" . '</h3>';
+  
  echo "<h1>" . $artist . "</h1>";
  echo '<br>';
  
@@ -89,7 +108,7 @@ $json =  file_get_contents($url);
 // echo "<br>";
  //      
 echo '<div class="output debug">' . 
-'<a href="http://www.songsterr.com/a/wa/bestMatchForQueryString?s='  . $guitarTab[$i] -> title . '&a='.   $artist . '&inst=' . $inst . '"> '. '<h4>' . $guitarTab[$i] -> title . '</h4>' . ' </a></div>'; 
+'<a href="http://www.songsterr.com/a/wa/bestMatchForQueryString?s='  . $guitarTab[$i] -> title . '&a=' . $artist . '&inst=' . $track . '"> '. '<h4>' . $guitarTab[$i] -> title . '</h4>' . ' </a></div>'; 
  
 }
 

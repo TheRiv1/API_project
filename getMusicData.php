@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="description" content="Find your tab">
+	<meta name="keywords" content="guitar tabs">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="guitar.css">
 	<!-- navbar bootstrap -->
