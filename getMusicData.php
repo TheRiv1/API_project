@@ -59,7 +59,8 @@ $artist = $_GET['artist']; // ....getMusicData.php?artist='';
 // $artist = '"' .  $artist . '"';
 $artist = str_replace(' ', ',', $artist);
 
-echo $artist;
+
+// echo $artist;
 //$song = $_GET['song'];
 //$a = $_GET['artist name'];
 
@@ -107,7 +108,7 @@ $json =  file_get_contents($url);
  // 	   
 echo '<div class="output debug">' .
 '<a href="http://www.songsterr.com/a/wa/bestMatchForQueryString?s=' . $guitarTab[$i] -> title .
- '&a=' .   $artist . '"> '. '<h4>' . $guitarTab[$i] -> title . '</h4>' . ' </a></div>';	
+ '&a=' . $artist . '"> '. '<h4>' . $guitarTab[$i] -> title . '</h4>' . ' </a></div>';	
 }
 
 ?>			

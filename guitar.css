@@ -5,6 +5,7 @@
 body{
 	text-align:center;
 	background: #706166;
+
 }
 
 h1{
@@ -15,7 +16,9 @@ font-family: 'Felipa', cursive;
 height: 100%;
 
 }
-
+.container h1{
+font-family: 'Felipa', cursive;
+}
 
 
 .output {
@@ -33,6 +36,8 @@ height: 100%;
     
 }
 
-@media only screen and (max-width: 320px) {
-
+@media only screen and (max-width:425px) {
+	h1.top, h2.below-top{
+	display: block;
+}
 }

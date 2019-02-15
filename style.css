@@ -16,7 +16,7 @@ body {
     box-shadow:0 5px 20px rgba(0,0,0,.5);
     border-radius:4px;
     transition:width .5s;
-    overflow:hidden;
+   
 }
 .search.active {
     width:600px;
@@ -32,6 +32,7 @@ body {
     font-size:36px;
     padding:0 10px;
     color:#666;
+
     
 }
 .search.active .icon {
@@ -133,16 +134,22 @@ a{
    
 }
 
-@media screen and (min-width: 900px) {
 
+@media only screen and (max-width: 768px) {
+  .search.active{
+   width: 70%;
+  }
+  .top{
+    font-size: 30px;
+  }
 
+  .below-top{
+    font-size: 20px;
+  }
+
+  .search input{
+
+    font-size: 16px;
+  }
 }
 
-@media screen and (max-width: 799px){
-
-
-}
-
-@media only screen and (max-width: 320px) {
-
-}
