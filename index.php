@@ -19,9 +19,11 @@
 
 <body>
 
+<!-- fonts homepage -->
 	<h1 class="top">Music Tabs</h1>
 	<h2 class="below-top">Find Your Tab</h2>
 	
+	<!-- SearchBar  -->
 	<form action="getMusicData.php" method="GET">
 	<div class="search">
 		<input type="text" name="artist" id="searchBar" placeholder="Search...">
